@@ -1,0 +1,39 @@
+ERrrorr
+
+1. options.filter is not a function
+TypeError: options.filter is not a function
+
+code :-
+<Autocomplete size='small' style={{margin:"10px"}}  freeSolo id="free-solo-2-demo" disableClearable 
+                                //  options={products.map((option) => option.branchname)}
+                                 options={setCustomerName}
+
+
+resolved :-  in option we have to give state name like CustomerName.
+
+***********************************************************************************************************
+2. Warning: Each child in a list should have a unique "key" prop.
+
+code:
+paginatedData.map((product, index) => (
+        
+          <TableRow>
+
+resolved:if your using Map you have to set key value, That key value must be unique.
+you can give like <TableRow key={product.id}>
+
+
+****************************************************************************************************************
+3.Warning: Failed prop type: Invalid prop `children` supplied to `ForwardRef(TableCell)`, expected a ReactNode.
+
+code:
+        <TableCell>{product.status}</TableCell>
+
+resolved: if product.status is null that time we are getting this error.
+<TableCell>{(!product.status==null|| !product.status==" ") ? 'NA' :product.status}</TableCell>
+
+*******************************************************************************************************************
+
+
+
+

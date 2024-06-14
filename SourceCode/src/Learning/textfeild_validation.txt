@@ -1,0 +1,67 @@
+import { useState } from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+
+
+function SingleInputForm() {
+  const [validated, setValidated] = useState(false);
+  const [formdata, setFormdata] = useState({username:'',Email:''});
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    for (const [fieldName, fieldValue] of Object.entries(formdata)) {
+      if (fieldValue.trim() === '') {
+        setValidated(true);
+        return;
+      }
+    }
+    setValidated(false);
+  };
+ 
+  const handleChange = (e) => {
+    const { name, value } = e.target;  
+    setFormdata({...formdata,[name]:value});
+
+  };
+
+  return (
+  <>
+      <form noValidate validated={validated} onSubmit={handleSubmit}>
+      <TextField
+        label="Username"
+        placeholder="Enter your username"
+        value={formdata.username}
+        name="username"
+        onChange={handleChange}
+        fullWidth
+        required
+        variant="standard"
+        error={validated && formdata.username.trim() === ''}
+        helperText={validated && formdata.username.trim() === '' ? 'Please choose a username.' : ''}
+   
+      />
+      
+      <TextField
+        label="Email"
+        name="Email"
+        fullWidth
+        placeholder="Enter your Email"
+        value={formdata.Email}
+        onChange={handleChange}
+        required
+        variant="standard"
+        error={validated && formdata.Email.trim() === '' }
+        helperText={validated && formdata.Email.trim() === '' ? 'Please choose a Email.' : ''}
+   
+      />
+      <Button type="submit" variant="contained">Submit form</Button>
+    </form>
+
+
+    </>
+
+  );
+}
+
+export default SingleInputForm;

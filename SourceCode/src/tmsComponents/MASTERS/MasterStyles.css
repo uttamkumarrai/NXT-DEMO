@@ -1,0 +1,77 @@
+.form-select .css-1wa3eu0-placeholder, .form-select .css-26l3qy-menu {
+    width: 150px;
+   
+  }
+  div.css-13cymwt-control{
+
+color: red;
+
+  }
+  .modal-div {
+    position: fixed; /* Use fixed positioning to ensure the modal stays centered */
+    top: calc(50% + 20px); /* Move the top of the modal down by 50% of the viewport height plus the padding */
+    left: 50%; /* Move the left of the modal in by 50% of the viewport width */
+    transform: translate(-50%, -50%); /* Translate the modal up and left by half its width and height */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width:900px ;
+    max-height: 100vh; /* Set maximum height for the modal */
+    
+}
+.modal-div-vehicle{
+  position: fixed; /* Use fixed positioning to ensure the modal stays centered */
+  top: calc(50% + 20px); /* Move the top of the modal down by 50% of the viewport height plus the padding */
+  left: 50%; /* Move the left of the modal in by 50% of the viewport width */
+  transform: translate(-50%, -50%); /* Translate the modal up and left by half its width and height */
+  background-color: white;
+  padding: 20px;
+  
+  border-radius: 5px;
+  max-height: 100vh; /* Set maximum height for the modal */
+}
+  .textfield-margin{
+    margin-bottom: 9px !important;
+  }
+  .textfield-vehicle{
+    margin-bottom: 9px !important;
+    margin-right: 30px !important;
+    margin: 10px;
+  }
+  
+  .modal-botton{
+    margin-right: 9px !important;
+  }
+  /* Custom CSS to remove bold styling */
+  .removeBold .MuiFormControlLabel-label {
+    font-weight: normal !important; /* Override the default bold font weight */
+  }
+  .upload-btn {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .upload-btn:hover {
+    background-color: #388E3C;
+  }
+  
+  .add-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #0056b3;
+  }
+
+
